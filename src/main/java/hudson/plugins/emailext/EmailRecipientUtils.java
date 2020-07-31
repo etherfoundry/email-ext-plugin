@@ -150,7 +150,7 @@ public class EmailRecipientUtils {
             while (tokens.hasMoreTokens()) {
                 String check = tokens.nextToken().trim();
                 descriptor.debug(listener.getLogger(), "Checking '%s' against '%s' to see if they are allowed", userName, check);
-                if (userName.endsWith(check)) {
+                if (userName.toLowerCase().endsWith(check.toLowerCase())) {
                     return true;
                 }
             }
